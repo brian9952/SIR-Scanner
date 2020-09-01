@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- javascript js -->
+<script src="js/jquery.js"></script>
+
+<style>
+  * {
+    box-sizing: border-box;
+    padding:20px;
+  }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  resize: vertical;
+  background: #f1f1f1;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-left : 900px;
+  	border-radius: 12px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  clear: both;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+
+</head>
+		<body>
+			<script> $(function(){
+				$('a#logout').click(function(){
+			   if(confirm("Are you sure want to logout?")) {
+			    return true;
+			   }
+			    return false;
+			   });
+				});
+			</script>
+
+  <h1>Add Images</h1>
+  <p>Please fill this form to add new images.</p>
+
+    <div class="container">
+      <form action="/action_page.php">
+        <img src="images/Sanshokuin.Sumireko.jpg" class="responsive" width="600" height="400">
+          <div class="row">
+            <input type="submit" value="Upload Photo" >
+          </div>
+            <div class="row">
+              <input type="submit" value="Submit" >
+            </div>
+      </form>
+    </div>
+
+    </body>
+</html>
